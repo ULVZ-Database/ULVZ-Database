@@ -12,14 +12,13 @@ double center_az(double,double,double,double);
 int main(int argc, char **argv){
 
 	// Event center and statoin center.
-    double EV_LON=-155.935,EV_LAT=19.878;
-    double NE_ST_LON=239.913,N_ST_LON=212.332;
-    double NE_ST_LAT=38.174,N_ST_LAT=61.849;
+    double EV_LON=-155.481;
+    double EV_LAT=19.676;
+    double ST_LON=-158;
+    double ST_LAT=21.381;
 
-	printf("NE: %.1lf\t%.1lf\n",gcpdistance(EV_LON,EV_LAT,NE_ST_LON,NE_ST_LAT)
-                               ,center_az(EV_LON,EV_LAT,NE_ST_LON,NE_ST_LAT));
-	printf("N: %.1lf\t%.1lf\n",gcpdistance(EV_LON,EV_LAT,N_ST_LON,N_ST_LAT)
-                              ,center_az(EV_LON,EV_LAT,N_ST_LON,N_ST_LAT));
+	printf("%.2lf\t%.2lf\n",gcpdistance(EV_LON,EV_LAT,ST_LON,ST_LAT)
+                           ,center_az(EV_LON,EV_LAT,ST_LON,ST_LAT));
 
     return 0;
 }

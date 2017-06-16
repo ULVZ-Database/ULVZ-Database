@@ -12,13 +12,13 @@ double center_az(double,double,double,double);
 int main(int argc, char **argv){
 
 	// Event center and statoin center.
-    double EV_LON=-28;
-    double EV_LAT=-58;
-    double ST_LON=27.5;
-    double ST_LAT=-25;
+    double EV_LON=179.898;
+    double EV_LAT=-23.192;
+    double ST_LON=134.370;
+    double ST_LAT=-18.760;
 
-	printf("%.1lf\t%.1lf\n",gcpdistance(EV_LON,EV_LAT,ST_LON,ST_LAT)
-						   ,center_az(EV_LON,EV_LAT,ST_LON,ST_LAT));
+	printf("%.2lf\t%.2lf\n",gcpdistance(EV_LON,EV_LAT,ST_LON,ST_LAT)
+                           ,center_az(EV_LON,EV_LAT,ST_LON,ST_LAT));
 
     return 0;
 }
@@ -27,7 +27,7 @@ double center_az(double evlo,double evla,double stlo,double stla){
 
 	// calculate event-station center point lon/lat.
 	double centerlon,centerlat,dist=gcpdistance(evlo,evla,stlo,stla);
-    waypoint(evlo,evla,stlo,stla,dist/2,&centerlon,&centerlat);
+    waypoint(evlo,evla,stlo,stla,dist*0.27,&centerlon,&centerlat);
 
 	// calculate azimuth from center point to station (at center point).
 	double x,y;

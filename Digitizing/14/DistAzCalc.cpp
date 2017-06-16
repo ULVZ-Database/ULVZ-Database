@@ -7,42 +7,27 @@ using namespace std;
 
 double gcpdistance(double,double,double,double);
 void waypoint(double,double,double,double,double,double *,double *);
-double bouncing_az(double,double,double,double,double);
+double center_az(double,double,double,double);
 
 int main(int argc, char **argv){
 
-// 	// Red. Event center and statoin center.
-//     double EV_LON=180;       // averaging Event Lon.
-//     double EV_LAT=-22.3;     // averaging Event Lat.
-//     double ST_LON=39.4188;
-//     double ST_LAT=8.9285;
-// 	double dist=21.1;        // averaging SourceSideDeg.
+	// Event center and statoin center.
+    double EV_LON=-178.2;
+    double EV_LAT=51.2;
+    double ST_LON=245.4;
+    double ST_LAT=62.5;
 
-// 	// Green. Event center and statoin center.
-//     double EV_LON=-178.09;   // averaging Event Lon.
-//     double EV_LAT=-30.22;    // averaging Event Lat.
-//     double ST_LON=39.4188;
-//     double ST_LAT=8.9285;
-// 	double dist=21.73;       // averaging SourceSideDeg.
-
-	// GRSN. Event center and statoin center.
-    double EV_LON=167.25;    // averaging Event Lon.
-    double EV_LAT=-14.25;    // averaging Event Lat.
-    double ST_LON=11.6156;
-    double ST_LAT=50.6447;
-	double dist=21.44;       // averaging SourceSideDeg.
-
-	printf("%.2lf\t%.2lf\n",gcpdistance(EV_LON,EV_LAT,ST_LON,ST_LAT)
-                           ,bouncing_az(EV_LON,EV_LAT,ST_LON,ST_LAT,dist));
+	printf("%.1lf\t%.1lf\n",gcpdistance(EV_LON,EV_LAT,ST_LON,ST_LAT)
+						   ,center_az(EV_LON,EV_LAT,ST_LON,ST_LAT));
 
     return 0;
 }
 
-double bouncing_az(double evlo,double evla,double stlo,double stla,double dist){
+double center_az(double evlo,double evla,double stlo,double stla){
 
 	// calculate event-station center point lon/lat.
-	double centerlon,centerlat;
-    waypoint(evlo,evla,stlo,stla,dist,&centerlon,&centerlat);
+	double centerlon,centerlat,dist=gcpdistance(evlo,evla,stlo,stla);
+    waypoint(evlo,evla,stlo,stla,dist/2,&centerlon,&centerlat);
 
 	// calculate azimuth from center point to station (at center point).
 	double x,y;
