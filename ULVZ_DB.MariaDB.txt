@@ -1,4 +1,4 @@
--> To import the database, do the folloing in command line:
+-> To import the database, do the following in command line:
 
 $ mysqladmin create ULVZ_DB
 $ mysql ULVZ_DB < ULVZ_DB.MariaDB.sql
