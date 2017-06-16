@@ -1,0 +1,88 @@
+Dear Shule 
+thanks for your email and yes - you can have all the points. :-)
+
+The events that show the larger amplitudes are
+lat      lon
+-22.2 179.25
+-21.7 -179.51
+-20.99 -179.02
+-22.84 178.93  (This one presumably -24.14 179.24. ---- Shule )
+
+the grey point is (PKPdf entry)
+-23.784195 169.628296
+
+the associated black point is (PKPbc entry)
+-25.178726 154.918884
+
+I only calculated the grey and black points for one event, the others are very close and within the grey and black points.. but you can calculate them with taup using the event locations and EAGLE centre
+8.9285   39.4188
+
+
+For the green event (i.e. showing no ulvz, or at least not a change in amplitude:)
+the events
+-14.93 167.17
+-14.65 167.26
+-13.27 167.05
+-16.18 167.89
+-14.80 167.24
+
+(Christin means the region 2, where strong scatters are found before PKPdf but on LongPeriod no large amplitude is observed.
+167.27 -14.05
+167.3  -14.7
+167.13 -13.48
+167.24 -13.79
+167.26 -14.25
+167.28 -15.15
+These events are recorded at GRSN.
+
+And the green event is recorded at EAGLE, no large ampiltude is observed.
+-178.09 -30.22
+
+---- Shule )
+
+PKPbc-entry
+5.926476 159.194275
+
+again I only calculated the one point since the others are quite close..... GRSN lat lon: +50.6447     +11.6156
+
+I hope that helps, let me know if you need anything else...
+we are just trying to finish a manuscript of ulvz (Alexandra Gassner a MSc student from Potsdam has compiled a few points...) I can ask her to email you the locations as well if you like..
+
+Best wishes and greetings to Ed (Ed did you get my mail recently? I seem to end up in spam these days...)
+Tine
+
+
+Organized by Shule:
+Lon/Lat
+
+1. Yes region, near source PKP b-caustic point.
+
+Events:
+179.25  -22.2 
+-179.51 -21.7 
+-179.02 -20.99
+179.24  -24.14
+
+EAGLE:
+39.4188 8.9285   
+
+2. No region, source/receiver side PKP b-caustic point.
+
+Events:
+167.27 -14.05
+167.3  -14.7
+167.13 -13.48
+167.24 -13.79
+167.26 -14.25
+167.28 -15.15
+
+GRSN:
+11.6156 50.6447     
+
+3. No point, source/receiver side PKP b-caustic point. Green event:
+
+Event:
+-178.09 -30.22
+
+EAGLE:
+39.4188 8.9285   

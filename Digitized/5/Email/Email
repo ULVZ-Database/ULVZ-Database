@@ -1,0 +1,17 @@
+Dear Shule,
+
+I compiled all the data I evaluated in 2007 study.
+
+I remembered that I mainly evaluated the Vs change in this study since I only detect "postcursor" for  most of the ScP waveforms.
+The postcursor to the ScP waveform is dominantly sensitive to the S wave velocity reduction, so I evaluated only Vs change.
+
+I attached three files & shell script (vs-delta.sh).
+
+* hinscp.nondtctd: Reflection lat & lng of ScP observed in Hi-net (ScsP not-detected)
+* imsscp.nondtctd: Reflection lat & lng of ScP observed in IMS-arrays (ScsP not-detected)
+* scsp_detected.dat: Reflection lat & lng of ScP with ScsP (Both Hi-net & IMS-Arrays)
+
+Can you tell me if you have any question?
+
+Thank you,
+Koki

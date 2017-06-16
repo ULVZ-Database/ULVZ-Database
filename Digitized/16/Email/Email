@@ -1,0 +1,21 @@
+Hi Shule, for the data I used in that paper I attach a table that has all of the info.  The columns give the information in the table attached at the end of this email.  Not sure if you were asking for this?
+
+For the summary figures of the old studies, I can't find the script to plot those figures anywhere.  Some of those were just digitized straight out of the papers, but others - particularly the ScP, PcP studies I calculated the bouncepoints from event/station pairs reported in those papers (where it actually was reported).  I'm sure I have a table of all those values somewhere, but I can't find where I put them.  Mike
+
+Field        Parameter
+-----        -----------------------------------------------------------------
+  1          Station abbreviation
+  2          Event abbreviation (yymmdd_hhmm)
+  3          Event Latitude (deg)
+  4          Event Longitude (deg)
+  5          Station Latitude (deg)
+  6          Station Longitude (deg)
+  7          Source-side SPdKS endpoint 1 Lat (deg) - based on PREM model*
+  8          Source-side SPdKS endpoint 1 Lon (deg) - based on PREM model*
+  9          Source-side SPdKS endpoint 2 Lat (deg) - based on PREM model*
+  10         Source-side SPdKS endpoint 2 Lon (deg) - based on PREM model*
+  11         Receiver-side SKPdS endpoint 1 Lat (deg) - based on PREM model*
+  12         Receiver-side SKPdS endpoint 1 Lon (deg) - based on PREM model*
+  13         Receiver-side SKPdS endpoint 2 Lat (deg) - based on PREM model*
+  14         Receiver-side SKPdS endpoint 2 Lon (deg) - based on PREM model*
+  15         Great circle arc distance between event and station (deg).  This is calculated for a spherical earth.

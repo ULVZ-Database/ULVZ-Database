@@ -1,0 +1,30 @@
+Dear Shule,
+
+my apologies for the delay in replying.
+I think it would make sense to fold together the 2005 points for WRA with the 2006 points for ASAR.
+I think the files all have the same structure: Columns are eventorigin,eventlat, eventlon, eventdepth, ScPlat, ScPlon
+
+So I am sending a couple of files:
+
+WRA_SCP_EVENTS_pp.dat: The whole dataset for the 2005 study into WRA,
+these are all points with ScP I think.
+
+presursor_events_wra_pp.dat (apologies for the filename typo!): These
+are all events with the strong SdS/SPcP precursors that we see in this
+dataset. So these are the events that resolve the ULVZ structure in the
+area.
+
+ASAR_SCP_EVENTS_pp.dat: The ScP dataset for the 2006 study into ASAR
+(the one with the higher frequency and therefore higher resolution).
+
+ASAR_ULVZ_events.dat: These are the events with waveforms indicating
+ULVZ structure.
+
+Let me know if these do not make sense. These are both ScP studies. Let me know if you need any further information about some of the other ULVZ studies from me or my group.
+
+I think a map that not only shows ULVZ location but also preceived ULVZ properties would be very powerful. The only problem is that most are only using 1D modeling and even the core reflection models might not represent the ULVZ structure particularly well. But it might be worth it.
+
+Happy to help with this if I can.
+
+Thanks,
+Sebastian

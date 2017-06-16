@@ -1,0 +1,11 @@
+Hi Shule, sorry this took so long to get to you.
+
+Attached is a c-shell script that will plot the ULVZ locations from the 2013 EPSL paper.
+
+The ULVZ locations are in the psxy calls, and give the lon, lats of the positions.
+
+I will ask Jensen to send me his script for plotting the locations from the GRL paper as well.
+
+I looked around his directories but have no idea where he stored stuff. 
+
+Mike

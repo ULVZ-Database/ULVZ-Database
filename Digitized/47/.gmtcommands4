@@ -1,0 +1,6 @@
+# GMT common arguments shelf
+-Bg30/g30
+-JG175/-5/5i
+-Rg
+-jG175/-5/5i
+EOF

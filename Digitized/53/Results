@@ -1,0 +1,35 @@
+
+~~~~ : Inputs.
+---- : Outputs.
+
+
+1. source side PKIKP CMB sampling point.
+
+Events2 to TAB:
+
+<EVLO>  <EVLA>  <EVDP> <STLO> <STLA> <Dist> <SrcSideDeg>
+179.2   -21.1   627    46.099 38.147 136.4  9.28
+~~~~~   ~~~~~   ~~~    ~~~~~~ ~~~~~~        ----
+
+> taup_path -ph PKIKP -h 627 -evt -21.2 179.2 -sta 38.147 46.099 -mod prem -o stdout | grep 3480
+
+2. source side PKIKP CMB sampling point.
+
+Events2 to UME:
+
+<EVLO>  <EVLA>  <EVDP> <STLO> <STLA> <Dist> <SrcSideDeg>
+179.2   -21.1   627    19.857 63.887 135.1  9.35
+~~~~~   ~~~~~   ~~~    ~~~~~~ ~~~~~~        ----
+
+> taup_path -ph PKIKP -h 627 -evt -21.2 179.2 -sta 63.887 19.857 -mod prem -o stdout | grep 3480
+
+3. Measure from fig.6 where is the PKIKP on modles.
+
+A: SrcSideDeg-1.04 deg ~ SrcSideDeg+7.93 deg.
+B: SrcSideDeg-3.19 deg ~ SrcSideDeg+6.98 deg.
+
+4. Calculate the lon/lat at the model begin and end point.
+
+> c++ PutModel.cpp
+> ./a.out 179.2 -21.1 46.099 38.147 9.28 1.04 7.93 > Data.PKP.WP.yes.line
+> ./a.out 179.2 -21.1 19.857 63.887 9.35 3.19 6.98 >> Data.PKP.WP.yes.line
