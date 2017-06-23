@@ -1,11 +1,8 @@
 
 1. File naming:
 
-	          Data.Phase.Code.[yes,no,may].[point,line,area]
-	  	      ---- ----- ---- ------------ -----------------
-
-              A ">" character at the beginning of a line means comment.
-
+              Data.Phase.Code.[yes,no,may].[point,line,area]
+              ---- ----- ---- ------------ -----------------
 
   -> "Data.": files without this prefix are regarded as supplementary data.
 
