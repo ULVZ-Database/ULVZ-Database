@@ -39,118 +39,15 @@
 	   regions, and they are seperated by a ">" character. 
 
 
-2. A list of study numbers. Numbering is not continuous because some
-   collected studies are excluded from the database either because their
-   main focus int the paper was not ULVZ, or the provided figures were too
-   vague to digitize.
+2. The summary for ULVZ properties are in these two files:
 
-1
-2
-3
-4
-5
-6
-7
-9
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-24
-25
-26
-28
-30
-32
-33
-34
-35
-36
-37
-38
-40
-42
-44
-46
-47
-48
-49
-50
-51
-52
-53
-55
-56
-62
-64
-65
-67
-70
-72
-73
-74
+	-- ULVZ_DB.MariaDB.sql
+	-- ULVZ_DB.MariaDB.txt
 
-10. Waveform, reflection, yes:
+	While "ULVZ_DB.MariaDB.sql" is a direct data dump from MariaDB. To restore
+	the database, use:
 
-3
-4
-5
-6
-12
-13
-17
-19
-22
-26
-28
-32
-33
-35
-44
-47
-55
-56
-62
-65
-70
-73
-74
+	$ mysqladmin create ULVZ_DB
+	$ mysql ULVZ_DB < ULVZ_DB.MariaDB.sql
 
-11. Sdiff,Pdiff,PKKPdiff
-
-2
-9
-11
-24
-
-12. SPdKS, SKPdS.
-
-1
-7
-16
-18
-36
-40
-50
-52
-72
-
-13. PKP.
-
-14
-15
-25
-34
-37
-46
-48
-51
-53
+	"ULVZ_DB.MariaDB.txt" is an ascii format of "ULVZ_DB.MariaDB.sql".
