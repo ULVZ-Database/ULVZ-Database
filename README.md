@@ -15,7 +15,7 @@
 4. "TargetFigures".
 
 	Our digitizing are based on these published figures. (These are
-	screen captured figures from published papaers.)
+	screen captured figures from published papers.)
 
 5. "Digitizing".
 
