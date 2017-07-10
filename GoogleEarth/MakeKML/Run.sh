@@ -8,8 +8,8 @@ rm -f ${OUTFILE}
 # 1. Header
 
 cat > ${OUTFILE} << EOF
-<?xml version="1.0" encoding="UTF-8"?> 
-<kml xmlns="http://earth.google.com/kml/2.0"> 
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
 
 <Document>
 
@@ -43,6 +43,8 @@ EOF
 while read Ref Type DataType filename
 do
 
+	PaperName=`awk 'BEGIN {FS="|"} {print $2,$8}' ../../Database/ULVZ_DB.MariaDB.txt | grep -w ${Ref} | head -n 1`
+
 	[ ${Type} = "yes" ] && Color=ff0000ff
 	[ ${Type} = "no"  ] && Color=ffff0000
 	[ ${Type} = "may" ] && Color=ff00ffff
@@ -60,8 +62,6 @@ do
 EOF
 		fi
 
-		PaperName=`awk 'BEGIN {FS="|"} {print $2,$8}' ../../Database/ULVZ_DB.MariaDB.txt | grep -w ${Ref} | head -n 1`
-
 		cat >> ${OUTFILE} << EOF
 		<Folder>
 
@@ -71,7 +71,7 @@ EOF
 	fi
 
 
-	grep -n ">" ${filename} | awk 'BEGIN {FS=":"} {print $1}' > tmpfile_lines 
+	grep -n ">" ${filename} | awk 'BEGIN {FS=":"} {print $1}' > tmpfile_lines
 	wc -l < ${filename} | awk '{print $1+1}' >> tmpfile_lines
 
 	Cnt=0
@@ -101,14 +101,15 @@ EOF
 				<colorMode>normal</colorMode>
 				<color>${Color}</color>
 				<fill>1</fill>
-				</PolyStyle></Style><Polygon><outerBoundaryIs><LinearRing><coordinates>
+				</PolyStyle></Style>
+				<Polygon><outerBoundaryIs><LinearRing><coordinates>
 EOF
 			Flag=`minmax -C ${file} | awk '{if ($1<-150) print 1; else print 0}'`
 
 			if [ ${Flag} -eq 1 ]
 			then
 				awk '{if ($1<0) $1+=360; print $1","$2}' ${file} >> ${OUTFILE}
-			else 
+			else
 				awk '{print $1","$2}' ${file} >> ${OUTFILE}
 			fi
 
@@ -128,7 +129,9 @@ EOF
 					<colorMode>normal</colorMode>
 					<scale>0.6</scale>
 					<Icon><href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href></Icon>
-					</IconStyle></Style><Point><coordinates>
+					</IconStyle></Style>
+					<name>${PaperName}</name>
+					<Point><coordinates>
 ${lon},${lat}
 			</coordinates></Point></Placemark>
 
@@ -141,7 +144,13 @@ EOF
 			<Placemark><Style><LineStyle>
 				<color>${Color}</color>
 				<width>2</width>
-				</LineStyle></Style><LineString>
+				</LineStyle></Style>
+				<name>${PaperName}</name>
+				<MultiGeometry>
+				<Point><coordinates>
+				`head -n 1 ${file} | awk '{if ($1>180) $1-=360; print $1,$2}'`
+				</coordinates></Point>
+				<LineString>
 				<tessellate>1</tessellate>
 				<extrude>1</extrude>
 				<altitudeMode>clampedToGround</altitudeMode>
@@ -151,12 +160,12 @@ EOF
 			if [ ${Flag} -eq 1 ]
 			then
 				awk '{if ($1<0) $1+=360; print $1","$2}' ${file} >> ${OUTFILE}
-			else 
+			else
 				awk '{print $1","$2}' ${file} >> ${OUTFILE}
 			fi
-			
+
 			cat >> ${OUTFILE} << EOF
-				</coordinates></LineString></Placemark>
+				</coordinates></LineString></MultiGeometry></Placemark>
 
 EOF
 
@@ -199,6 +208,8 @@ EOF
 while read Ref Type filename
 do
 
+	PaperName=`awk 'BEGIN {FS="|"} {print $2,$8}' ../../Database/ULVZ_DB.MariaDB.txt | grep -w ${Ref} | head -n 1`
+
 	[ ${Type} = "yes" ] && FillColor=7f0000ff
 	[ ${Type} = "no"  ] && FillColor=7fff0000
 	[ ${Type} = "may" ] && FillColor=7f00ffff
@@ -216,8 +227,6 @@ do
 EOF
 		fi
 
-		PaperName=`awk 'BEGIN {FS="|"} {print $2,$8}' ../../Database/ULVZ_DB.MariaDB.txt | grep -w ${Ref} | head -n 1`
-
 		cat >> ${OUTFILE} << EOF
 		<Folder>
 
@@ -227,7 +236,7 @@ EOF
 	fi
 
 
-	grep -n ">" ${filename} | awk 'BEGIN {FS=":"} {print $1}' > tmpfile_lines 
+	grep -n ">" ${filename} | awk 'BEGIN {FS=":"} {print $1}' > tmpfile_lines
 	wc -l < ${filename} | awk '{print $1+1}' >> tmpfile_lines
 
 	Cnt=0
@@ -254,19 +263,26 @@ EOF
 				<colorMode>normal</colorMode>
 				<color>${FillColor}</color>
 				<fill>1</fill>
-				</PolyStyle></Style><Polygon><outerBoundaryIs><LinearRing><coordinates>
+				</PolyStyle></Style>
+				<name>${PaperName}</name>
+				<MultiGeometry>
+				<Point><coordinates>
+				`head -n 1 ${file} | awk '{if ($1>180) $1-=360; print $1,$2}'`
+				</coordinates></Point>
+				<Polygon><outerBoundaryIs><LinearRing><coordinates>
 EOF
 		Flag=`minmax -C ${file} | awk '{if ($1<-150) print 1; else print 0}'`
 
 		if [ ${Flag} -eq 1 ]
 		then
 			awk '{if ($1<0) $1+=360; print $1","$2}' ${file} >> ${OUTFILE}
-		else 
+		else
 			awk '{print $1","$2}' ${file} >> ${OUTFILE}
 		fi
 
 		cat >> ${OUTFILE} << EOF
-				</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+				</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry></Placemark>
+
 
 EOF
 	done
