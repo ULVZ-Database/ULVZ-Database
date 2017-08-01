@@ -130,7 +130,6 @@ EOF
 					<scale>0.6</scale>
 					<Icon><href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href></Icon>
 					</IconStyle></Style>
-					<name>${PaperName}</name>
 					<Point><coordinates>
 ${lon},${lat}
 			</coordinates></Point></Placemark>
@@ -145,11 +144,6 @@ EOF
 				<color>${Color}</color>
 				<width>2</width>
 				</LineStyle></Style>
-				<name>${PaperName}</name>
-				<MultiGeometry>
-				<Point><coordinates>
-				`head -n 1 ${file} | awk '{if ($1>180) $1-=360; print $1,$2}'`
-				</coordinates></Point>
 				<LineString>
 				<tessellate>1</tessellate>
 				<extrude>1</extrude>
@@ -165,7 +159,7 @@ EOF
 			fi
 
 			cat >> ${OUTFILE} << EOF
-				</coordinates></LineString></MultiGeometry></Placemark>
+				</coordinates></LineString></Placemark>
 
 EOF
 
@@ -264,11 +258,6 @@ EOF
 				<color>${FillColor}</color>
 				<fill>1</fill>
 				</PolyStyle></Style>
-				<name>${PaperName}</name>
-				<MultiGeometry>
-				<Point><coordinates>
-				`head -n 1 ${file} | awk '{if ($1>180) $1-=360; print $1,$2}'`
-				</coordinates></Point>
 				<Polygon><outerBoundaryIs><LinearRing><coordinates>
 EOF
 		Flag=`minmax -C ${file} | awk '{if ($1<-150) print 1; else print 0}'`
@@ -281,7 +270,7 @@ EOF
 		fi
 
 		cat >> ${OUTFILE} << EOF
-				</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry></Placemark>
+				</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
 
 
 EOF

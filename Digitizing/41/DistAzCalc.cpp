@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<fstream>
 #include<stdlib.h>
 #include<math.h>
 #include<string>
@@ -10,30 +9,17 @@ double gcpdistance(double,double,double,double);
 void waypoint(double,double,double,double,double,double *,double *);
 double center_az(double,double,double,double);
 
-int main(int argc, char *argv[]){
-	
-	// Hawaii station center.
-	double ST_LON=-155.369;
-	double ST_LAT=19.379;
+int main(int argc, char **argv){
 
 	// Event center and statoin center.
-	double EV_LON,EV_LAT;
-	int Count;
-	double Gcp,Az;
-	
-	ifstream fpin(argv[1]);
+    double EV_LON=-155.935,EV_LAT=19.878;
+    double NE_ST_LON=239.913,N_ST_LON=212.332;
+    double NE_ST_LAT=38.174,N_ST_LAT=61.849;
 
-	Gcp=0;Az=0;Count=0;
-	while (fpin >> EV_LON >> EV_LAT){
-
-		Gcp+=gcpdistance(EV_LON,EV_LAT,ST_LON,ST_LAT);
-		Az+=center_az(EV_LON,EV_LAT,ST_LON,ST_LAT);
-		Count++;
-
-	}
-	fpin.close();
-
-	printf("Averaged: %.1lf\t%.1lf\n",Gcp/Count,Az/Count);
+	printf("NE: %.1lf\t%.1lf\n",gcpdistance(EV_LON,EV_LAT,NE_ST_LON,NE_ST_LAT)
+                               ,center_az(EV_LON,EV_LAT,NE_ST_LON,NE_ST_LAT));
+	printf("N: %.1lf\t%.1lf\n",gcpdistance(EV_LON,EV_LAT,N_ST_LON,N_ST_LAT)
+                              ,center_az(EV_LON,EV_LAT,N_ST_LON,N_ST_LAT));
 
     return 0;
 }
@@ -42,7 +28,7 @@ double center_az(double evlo,double evla,double stlo,double stla){
 
 	// calculate event-station center point lon/lat.
 	double centerlon,centerlat,dist=gcpdistance(evlo,evla,stlo,stla);
-    waypoint(evlo,evla,stlo,stla,dist*0.224,&centerlon,&centerlat);
+    waypoint(evlo,evla,stlo,stla,dist/2,&centerlon,&centerlat);
 
 	// calculate azimuth from center point to station (at center point).
 	double x,y;

@@ -12,39 +12,13 @@ double center_az(double,double,double,double);
 int main(int argc, char **argv){
 
 	// Event center and statoin center.
-    double ST_LON=242.441;
-    double ST_LAT=34.338;
+    double EV_LON=181.371;
+    double EV_LAT=-18.024;
+    double ST_LON=118.197;
+    double ST_LAT=42.179;
 
-    double EV_LON_1=262.098;
-    double EV_LAT_1=15.963; 
-
-    double EV_LON_2=268.166;
-    double EV_LAT_2=14.686;
-
-    double EV_LON_3=273.633;
-    double EV_LAT_3=11.156;
-
-    double EV_LON_4=277.703;
-    double EV_LAT_4=6.598;
-
-    double EV_LON_5=283.175;
-    double EV_LAT_5=4.865;
-
-    double EV_LON_6=287.011;
-    double EV_LAT_6=6.108;
-
-	printf("Bin_1: %.1lf\t%.1lf\n",gcpdistance(EV_LON_1,EV_LAT_1,ST_LON,ST_LAT)
-                           ,center_az(EV_LON_1,EV_LAT_1,ST_LON,ST_LAT));
-	printf("Bin_2: %.1lf\t%.1lf\n",gcpdistance(EV_LON_2,EV_LAT_2,ST_LON,ST_LAT)
-                           ,center_az(EV_LON_2,EV_LAT_2,ST_LON,ST_LAT));
-	printf("Bin_3: %.1lf\t%.1lf\n",gcpdistance(EV_LON_3,EV_LAT_3,ST_LON,ST_LAT)
-                           ,center_az(EV_LON_3,EV_LAT_3,ST_LON,ST_LAT));
-	printf("Bin_4: %.1lf\t%.1lf\n",gcpdistance(EV_LON_4,EV_LAT_4,ST_LON,ST_LAT)
-                           ,center_az(EV_LON_4,EV_LAT_4,ST_LON,ST_LAT));
-	printf("Bin_5: %.1lf\t%.1lf\n",gcpdistance(EV_LON_5,EV_LAT_5,ST_LON,ST_LAT)
-                           ,center_az(EV_LON_5,EV_LAT_5,ST_LON,ST_LAT));
-	printf("Bin_6: %.1lf\t%.1lf\n",gcpdistance(EV_LON_6,EV_LAT_6,ST_LON,ST_LAT)
-                           ,center_az(EV_LON_6,EV_LAT_6,ST_LON,ST_LAT));
+	printf("%.2lf\t%.2lf\n",gcpdistance(EV_LON,EV_LAT,ST_LON,ST_LAT)
+                           ,center_az(EV_LON,EV_LAT,ST_LON,ST_LAT));
 
     return 0;
 }
