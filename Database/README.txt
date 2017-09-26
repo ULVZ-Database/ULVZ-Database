@@ -41,10 +41,10 @@
 	-- ULVZ_DB.MariaDB.sql
 	-- ULVZ_DB.MariaDB.txt
 
-	While "ULVZ_DB.MariaDB.sql" is a direct data dump from MariaDB. To restore
+	-- "ULVZ_DB.MariaDB.sql" is a direct data dump from MariaDB. To restore
 	the database, use:
 
 	$ mysqladmin create ULVZ_DB
 	$ mysql ULVZ_DB < ULVZ_DB.MariaDB.sql
 
-	"ULVZ_DB.MariaDB.txt" is an ascii format of "ULVZ_DB.MariaDB.sql".
+	-- "ULVZ_DB.MariaDB.txt" is an ascii format of "ULVZ_DB.MariaDB.sql".
