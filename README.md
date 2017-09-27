@@ -1,10 +1,10 @@
 
-1. "Database".
+1. "Database"
 
 	This folder contains digitized ULVZ locations from each study.
 	This contains what we refer to as "Raw" in the paper.
 
-2. "FresnelZoneAdded".
+2. "FresnelZoneAdded"
 
 	Files in this folder gives the outline of regions after
 	proper fresnel zones are added to the "Raw" locations.
@@ -13,12 +13,12 @@
 
 	An example to visualize the database.
 
-4. "TargetFigures".
+4. "FiguresInPublications"
 
 	Our digitizing are based on these published figures. (These are
 	screen captured figures from published papers.)
 
-5. "Digitizing".
+5. "Digitizing"
 
 	Details of our digitizing procedure. (gc files can be open by
 	a free software for mac: http://www.arizona-software.ch/graphclick/ )
@@ -26,7 +26,7 @@
 
 --------
 
-Reference List
+Reference numbering.
 
 1.   Vidale, J. E., and H. M. Benz (1992), A sharp and flat section of the core-mantle boundary, Nature (ISSN 0028-0836), 359, 627–629, doi:10.1038/359627a0.
 2.   Mori, J., and D. V. Helmberger (1995), Localized boundary layer below the mid‐Pacific velocity anomaly identified from a PcP precursor, Journal of Geophysical Research: Solid Earth (1978–2012), 100(B10), 20359–20365.
