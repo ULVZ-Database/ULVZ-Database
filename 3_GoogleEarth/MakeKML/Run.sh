@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Run under ULVZ-Database/GoogleEarth/MakeKML/
+# Run under ULVZ-Database/3_GoogleEarth/MakeKML/
 
 OUTFILE="GoogleEarthView.kml"
 rm -f ${OUTFILE}

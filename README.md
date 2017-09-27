@@ -6,7 +6,7 @@
 
 2. "FresnelZoneAdded"
 
-	Files in this folder gives the outline of regions after
+	Files in this folder gives the 0.5˚ x 0.5˚ gridded regions after
 	proper fresnel zones are added to the "Raw" locations.
 
 3. "GoogleEarth"
