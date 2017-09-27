@@ -48,3 +48,14 @@
 	$ mysql ULVZ_DB < ULVZ_DB.MariaDB.sql
 
 	-- "ULVZ_DB.MariaDB.txt" is an ascii format of "ULVZ_DB.MariaDB.sql".
+
+
+3. For your convenience, here's a list of numbering grouped by phases used
+(first column in Table 1 of our paper).
+	
+	S-diff     : 44,45,54
+	P-diff     : 35
+	PKKPab_diff: 31
+	SKS(SPdKS) : 5,7,11,19,23,25,46,47,52
+	PKP        : 6,8,10,14,17,20,32,36,39,48
+	Reflection : 1,2,3,4,9,12,13,15,16,18,21,22,24,26,27,28,29,30,33,34,37,38,40,41,42,43,49,50,51,53

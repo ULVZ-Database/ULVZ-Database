@@ -2,11 +2,12 @@
 1. "Database".
 
 	This folder contains digitized ULVZ locations from each study.
+	This contains what we refer to as "Raw" in the paper.
 
 2. "FresnelZoneAdded".
 
-	Files in this folder represent the outline of regions after
-	proper fresnel zones are added to the digitized locations.
+	Files in this folder gives the outline of regions after
+	proper fresnel zones are added to the "Raw" locations.
 
 3. "GoogleEarth"
 
