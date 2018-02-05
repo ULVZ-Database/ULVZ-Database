@@ -61,15 +61,15 @@ int main(){
 		double ul=j*41+i,bl=ul+41;
 
 
-		vector<pair<pair<double,double>,pair<double,double>>> Polygon;
-		Polygon.push_back({gd[ul],{x,y}});
-		Polygon.push_back({gd[bl],{x,y-0.5}});
-		Polygon.push_back({gd[bl+1],{x+0.5,y-0.5}});
-		Polygon.push_back({gd[ul+1],{x+0.5,y}});
+		vector<pair<double,double>> Polygon;
+		Polygon.push_back(gd[ul]);
+		Polygon.push_back(gd[bl]);
+		Polygon.push_back(gd[bl+1]);
+		Polygon.push_back(gd[ul+1]);
 
 		auto ans=GridStretch(Polygon,ld[k]);
 
-		Ans.push_back(ans);
+		Ans.push_back({x+ans.first*0.5,y-0.5+ans.second*0.5});
 	}
 
 	for (int k=0;k<5;k++){
