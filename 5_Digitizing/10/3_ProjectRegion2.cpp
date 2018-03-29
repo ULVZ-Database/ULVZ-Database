@@ -3,7 +3,9 @@
 #include<cmath>
 #include<algorithm>
 #include<tuple>
-#include<ASU_tools.hpp>
+
+#include<GridStretch.hpp>
+#include<PointInPolygon.hpp>
 
 using namespace std;
 
@@ -39,7 +41,8 @@ int main(){
 			Polygon.push_back(gd[bl+1]);
 			Polygon.push_back(gd[ul+1]);
 
-			auto ans=PointsInPolygon(Polygon,ld);
+            vector<bool> ans;
+            for (const auto &item: ld) ans.push_back(PointInPolygon(Polygon,item));
 
 			for (size_t k=0;k<ans.size();k++){
 				if (ans[k]){
