@@ -75,7 +75,7 @@ Reference numbering.
 45.  Cottaar, S., and B. Romanowicz (2012), Earth and Planetary Science Letters, Earth and Planetary Science Letters, 355-356(c), 213–222, doi:10.1016/j.epsl.2012.09.005.
 46.  Thorne, M. S., E. J. Garnero, G. Jahnke, H. Igel, and A. K. McNamara (2013), Mega ultra low velocity zone and mantle flow, Earth and Planetary Science Letters, 364, 59–67, doi:10.1016/j.epsl.2012.12.034.
 47.  Jensen, K. J., M. S. Thorne, and S. Rost (2013), SPdKS analysis of ultra-low velocity zones beneath the western Pacific,, n/a–n/a, doi:10.1002/grl.50877.
-48.  Yao, J., and L. Wen (2014), Physics of the Earth and Planetary Interiors, Physics of the earth and planetary interiors, 233(C), 103–111, doi:10.1016/j.pepi.2014.05.009.
+48.  Yao, J., and L. Wen (2014), Seismic structure and ultra-low velocity zones at the base of the Earth’s mantle beneath Southeast Asia, Physics of the earth and planetary interiors, 233, 103–111, doi:10.1016/j.pepi.2014.05.009.
 49.  Gassner, A., C. Thomas, F. Krüger, and M. Weber (2015), Physics of the Earth and Planetary Interiors, Physics of the earth and planetary interiors, 246(C), 9–24, doi:10.1016/j.pepi.2015.06.007.
 50.  Pachhai, S., J. Dettmer, and H. Tkalčić (2015), Ultra-low velocity zones beneath the Philippine and Tasman Seas revealed by a trans-dimensional Bayesian waveform inversion, Geophys J Int, 203(2), 1302–1318, doi:10.1093/gji/ggv368.
 51.  Brown, S. P., M. S. Thorne, and L. Miyagi (2015), A compositional origin to ultralow‐velocity zones, Geophysical Research …, doi:10.1002/(ISSN)1944-8007.
